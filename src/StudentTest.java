@@ -1,5 +1,6 @@
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
+import src.Student;
 
 import java.util.ArrayList;
 import java.util.List;
