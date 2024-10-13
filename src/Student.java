@@ -63,17 +63,17 @@ public class Student {
         studentNum1.setRating(80);
 
         Student studentNum2 = new Student("Valera");
-        studentNum2.setRating(91);
+        studentNum2.setRating(95);
 
         Student studentNum3 = new Student("Masha");
         studentNum3.setName("Maria");
         studentNum3.setRating(100);
 
-        System.out.println(Student.getAvgRating()); //Display the average rating of all students.
+        System.out.println("Average rating of all students: " + Student.getAvgRating()); //Display the average rating of all students.
 
         studentNum2.changeRating(120); //Change the rating of any student.
 
-        System.out.println(Student.getAvgRating()); //Display the new average rating
+        System.out.println("Updated average rating of all students: " + Student.getAvgRating()); //Display the new average rating
 
     }
 }
