@@ -1,7 +1,8 @@
-public class Bird {
-    // TODO fix class declaration
+package src;
+
+public abstract class Bird {
 
     public void eat() {
-        // TODO print a message that bird is eating
+        System.out.println("Bird is eating");
     }
 }

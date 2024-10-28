@@ -1,7 +1,8 @@
-public class FlyingBird {
-    // TODO fix class declaration
+package src;
+
+public abstract class FlyingBird extends Bird {
 
     public void checkWings() {
-        // TODO print a message that bird wings are checked
+        System.out.println("Bird wings are checked");
     }
 }
