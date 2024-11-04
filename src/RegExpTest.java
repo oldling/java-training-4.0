@@ -1,3 +1,5 @@
+package src;
+
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -21,8 +23,10 @@ public class RegExpTest {
                 {" Invalid IP: 256.256.256.256!", ""},
                 {"invalid:256.256.256.256", ""},
                 {"valid IP: 255.255.255.255!", "255.255.255.255"},
-                {"invalid:255.255.255.255", "255.255.255.255"}
-                // TODO add 2 more test data here
+                {"invalid:255.255.255.255", "255.255.255.255"},
+                {"9999.9999.9999.9999", ""},
+                {"test^254.254.254.254|test", "254.254.254.254"},
+                {" http://127.0.0.1:4000/.", "127.0.0.1"}
         };
     }
 

@@ -1,3 +1,8 @@
+package src;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /**
  * Regular expressions.
  */
@@ -10,7 +15,15 @@ public class RegExp {
      * @return String with IP address
      */
     public static String getIpAddress(String text) {
-        // TODO fill in code here for extracting IP address using Regular Expression
-        return "";
+        String validIp = "(?<![\\d.])(?:(?:[1-9]?\\d|1\\d\\d|2[0-4]\\d|25[0-5])\\.){3}(?:[1-9]?\\d|1\\d\\d|2[0-4]\\d|25[0-5])(?![\\d.])";
+        String result = "";
+
+        Pattern pattern = Pattern.compile(validIp);
+        Matcher matcher = pattern.matcher(text);
+
+        if (matcher.find()) {
+            result = matcher.group();
+        }
+        return result;
     }
 }
