@@ -1,3 +1,5 @@
+package src;
+
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.fail;
 
@@ -15,8 +17,9 @@ public class ExampleExceptionTest {
     public static Object[][] data() {
         return new Object[][]{
                 {2, 2, 4},
-                {2, 3, 6}
-                // TODO add 2 more test data here
+                {2, 3, 6},
+                {11, 11, 121},
+                {1, 1, 1}
         };
     }
 
@@ -29,19 +32,26 @@ public class ExampleExceptionTest {
     public static Object[][] negativeData() {
         return new Object[][]{
                 {-2, 2},
-                {2, -2}
-                // TODO add 2 more test data here
+                {2, -2},
+                {0, 0},
+                {-1, 7}
         };
     }
 
     @Test(dataProvider = "data")
     public void testRectangleArea(int a, int b, int c) {
-        // TODO put your code here
-    }
+        assertEquals(ExampleException.rectangleArea(a,b), c, "Rectangle Area is NOT correct");
+}
 
 
     @Test(dataProvider = "negativeData")
     public void testRectangleAreaNegative(int a, int b) {
-        // TODO put your code here
+        try {
+            ExampleException.rectangleArea(a,b);
+            fail("Expected an IllegalArgumentException to be thrown");
+
+        } catch (IllegalArgumentException exception) {
+            assertEquals(exception.getMessage(), "Length and width should be more than 0");
+        }
     }
 }
