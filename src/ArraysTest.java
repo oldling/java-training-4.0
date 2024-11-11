@@ -1,3 +1,5 @@
+package src;
+
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -22,8 +24,17 @@ public class ArraysTest {
                         new String[]{"here", "is", "some", "text", ".", "text"},
                         new String[]{"some", "text", "above", "."},
                         new String[]{"some", "text", "."}
+                },
+                {
+                        new String[]{"1", "2", "3", "4", "5", "6", "7", "8", "9"},
+                        new String[]{"8", "7", "6", "5", "5", "4", "0"},
+                        new String[]{"4", "5", "6", "7", "8"}
+                },
+                {
+                        new String[]{"Implement", "method", "the", "ArrayUtil", "class", "which", "finds", "common"},
+                        new String[]{"which", "finds", "common", "elements", "of", "two", "String", "arrays"},
+                        new String[]{"which", "finds", "common"}
                 }
-                // TODO add 2 more test data here
         };
     }
 
