@@ -1,3 +1,5 @@
+package src;
+
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -19,8 +21,15 @@ public class StreamTaskTest {
                 {
                         new int[]{13, -2, 33, -4, 5},
                         20
+                },
+                {
+                        new int[]{1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21},
+                        0
+                },
+                {
+                        new int[]{-2, -1, 0, 0, 1},
+                        4
                 }
-                // TODO add 2 more test data here
         };
     }
 
@@ -38,8 +47,15 @@ public class StreamTaskTest {
                 {
                         new int[]{130, -200, 330, -40, 50, 66},
                         new int[]{}
+                },
+                {
+                        new int[]{5, 0, -1, 2, 3},
+                        new int[]{-1, 3, 5}
+                },
+                {
+                        new int[]{2, 4, 8, 10, 20, 30, 40, 55},
+                        new int[]{55}
                 }
-                // TODO add 2 more test data here
         };
     }
 
