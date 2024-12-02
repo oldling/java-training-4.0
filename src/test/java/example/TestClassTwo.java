@@ -25,4 +25,3 @@ public class TestClassTwo {
         System.out.println("XML parameters: " + parameter1 + " and " + parameter2);
     }
 }
-

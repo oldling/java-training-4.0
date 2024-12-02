@@ -6,12 +6,12 @@ import org.testng.annotations.Test;
 
 public class TestClassOne {
 
-    @BeforeGroups(groups = {"group1","group2", "group3"})
+    @BeforeGroups(groups = {"group1", "group2", "group3"})
     public void setup(){
         System.out.println("setup");
     }
 
-    @AfterMethod(groups = {"group1","group2", "group3"})
+    @AfterMethod(groups = {"group1", "group2", "group3"})
     public void teardown(){
         System.out.println("teardown");
     }

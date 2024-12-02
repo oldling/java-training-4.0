@@ -4,6 +4,7 @@
         <parameter name="parameter1" value="One"/>
         <parameter name="parameter2" value="Two"/>
         <classes>
+
             <class name="example.TestClassOne"/>
             <class name="example.TestClassTwo"/>
             <class name="example.TestClassThree"/>
